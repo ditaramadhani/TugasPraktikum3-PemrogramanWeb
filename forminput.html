@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contoh Program JavaScript</title>
+</head>
+	<script language="JavaScript">
+		//inisialisasi function test
+		function test(){
+			//deklarasi variabel Val1
+			var val1 = document.kirim. T1 .value
+
+			//logika if untuk menentukan pesan yang ditampilkan 
+			if(val1%2==0)
+				document.kirim.T2. value = "bilangan genap"
+			else 
+				document.kirim.T2. value= "bilangan ganjil"
+		}
+	</script>
+<body>
+	<!--tag form untuk menampung elemen yang berkaitan dengan form-->
+	<form method="POST" name= "kirim">
+		<!--untuk menampilkan tulisan dan teks area untuk memasukkan inputan-->
+		<p>BIL <input type="text" name="T1" size="20"> merupakan BIL 
+			<input type="text" name="T2" size="20"> </p>
+		<!--tombol untuk memanggil function test-->
+		<p><input type="button" name="B1" value="TEBAK" onclick=test()></p>
+		
+	</form>
+</body>
+</html>

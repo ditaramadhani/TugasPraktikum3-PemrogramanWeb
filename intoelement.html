@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> Writing into an Element HTML with JavaScript </title>
+</head>
+<body>
+	<!--mendeklarasikan elemen-->
+	<p id="greet"></p>
+	<p id="result"></p>
+
+	<script type="text/javascript">
+		//menampilkan teks "Hello, Gatot!"
+		document.getElementById("greet").innerHTML = "Hello, Gatot!";
+
+		//mendeklarasikan variabel
+		var x = 50;
+		var y = 30;
+		var sum = x+y;
+
+		//menampilkan pesan dari hasil operasi variabel sum
+		document.getElementById("result").innerHTML = sum;
+	</script>
+</body>
+</html>

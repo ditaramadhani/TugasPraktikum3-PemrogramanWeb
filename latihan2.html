@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Latihan 2</title>
+</head>
+<script language="JavaScript">
+	//untuk menampilkan kapan terakhir dokumen dimodifikasi
+	document.write("Dimodifikasi terakhir pada" + document.lastModified);
+
+	//deklarasi function dengan operasi penjumlahan
+	function tambah(){
+		var numb1 = parseFloat(document.calculator.numb1.value);
+		var numb2 = parseFloat(document.calculator.numb2.value);
+		if (isNaN (numb1)==false && isNaN (numb2)==false) {
+			var hasil = numb1+numb2;
+			document.calculator.hasil.value = hasil;
+		} 
+		else {
+			window. alert("Inputkan Angka!")
+		}
+	}
+
+	//deklarasi function dengan operasi pengurangan
+	function kurang(){
+		var numb1 = parseFloat(document.calculator.numb1.value);
+		var numb2 = parseFloat(document.calculator.numb2.value);
+		if (isNaN (numb1)==false && isNaN (numb2)==false) {
+			var hasil = numb1-numb2;
+			document.calculator.hasil.value = hasil;
+		} 
+		else {
+			window. alert("Inputkan Angka!")
+		}
+	}
+
+	//deklarasi function untuk operasi perkalian
+	function kali(){
+		var numb1 = parseFloat(document.calculator.numb1.value);
+		var numb2 = parseFloat(document.calculator.numb2.value);
+		if (isNaN (numb1)==false && isNaN (numb2)==false) {
+			var hasil = numb1*numb2;
+			document.calculator.hasil.value = hasil;
+		} 
+		else {
+			window. alert("Inputkan Angka!")
+		}
+	}
+
+	//deklarasi function untuk operasi pembagian
+	function bagi(){
+		var numb1 = parseFloat(document.calculator.numb1.value);
+		var numb2 = parseFloat(document.calculator.numb2.value);
+		if (isNaN (numb1)==false && isNaN (numb2)==false) {
+			var hasil = numb1/numb2;
+			document.calculator.hasil.value = hasil;
+		} 
+		else {
+			window. alert("Inputkan Angka!")
+		}
+	}
+</script>
+<body>
+	<style type="text/css">
+		body {
+			background-color: #57C5D6;
+			font-family: verdana;
+		}
+	</style>
+	<!--Tag untuk menuliskan tulisan dengan tipe heading 1-->
+	<h1 align="center"> Kalkulator Sederhana </h1>
+
+	<!--Tag form untuk menampung elemen yang berkaitan dengan form-->
+	<form method="POST" name="calculator">
+		
+		<!--tag table untuk membuat tabel-->
+		<table align= "center">
+			<tr>
+				<td>Angka 1 : </td>
+				<!--Tag untuk membuat text area untuk inputan-->
+				<td> <input type="text" name="numb1" size="10"> </td>
+			</tr>
+			<tr>
+				<td>Angka 2 : </td>
+				<!--tag untuk membuat text area untuk inputan-->
+				<td> <input type="text" name="numb2" size="10"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td align="center">
+					<!--menampilkan tombol-tombol yang memanggil/memproses
+						setiap function-->
+					<input type="button" value="+" onclick=tambah()>
+					<input type="button" value="-" onclick=kurang()>
+					<input type="button" value="*" onclick=kali()>
+					<input type="button" value="/" onclick=bagi()></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Hasil : </td>
+				<!--Menampilkan text area untuk menampilkan hasil-->
+				<td><input type="text" name="hasil" size="10"></td>
+
+				<!--menampilkan tombol untuk menghapus/mereset isi text area-->
+				<td align="center"> <input type="reset"></td>
+			</tr>
+		</table> 
+	</form>
+</body>
+</html>
